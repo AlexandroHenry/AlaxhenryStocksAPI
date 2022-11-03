@@ -74,8 +74,9 @@ public struct Quote: Decodable, Identifiable, Hashable {
     
     public let trailingAnnualDividendYield: Double?
     public let epsTrailingTwelveMonths: Double?
+    public let region: String?
     
-    public init(symbol: String, currency: String? = nil, marketState: String? = nil, fullExchangeName: String? = nil, displayName: String? = nil, regularMarketPrice: Double? = nil, regularMarketChange: Double? = nil, regularMarketChangePercent: Double? = nil, regularMarketChangePreviousClose: Double? = nil, regularMarketTime: Date? = nil, postMarketPrice: Double? = nil, postMarketChange: Double? = nil, regularMarketOpen: Double? = nil, regularMarketDayHigh: Double? = nil, regularMarketDayLow: Double? = nil, regularMarketVolume: Double? = nil, trailingPE: Double? = nil, marketCap: Double? = nil, fiftyTwoWeekLow: Double? = nil, fiftyTwoWeekHigh: Double? = nil, averageDailyVolume3Month: Double? = nil, trailingAnnualDividendYield: Double? = nil, epsTrailingTwelveMonths: Double? = nil) {
+    public init(symbol: String, currency: String? = nil, marketState: String? = nil, fullExchangeName: String? = nil, displayName: String? = nil, regularMarketPrice: Double? = nil, regularMarketChange: Double? = nil, regularMarketChangePercent: Double? = nil, regularMarketChangePreviousClose: Double? = nil, regularMarketTime: Date? = nil, postMarketPrice: Double? = nil, postMarketChange: Double? = nil, regularMarketOpen: Double? = nil, regularMarketDayHigh: Double? = nil, regularMarketDayLow: Double? = nil, regularMarketVolume: Double? = nil, trailingPE: Double? = nil, marketCap: Double? = nil, fiftyTwoWeekLow: Double? = nil, fiftyTwoWeekHigh: Double? = nil, averageDailyVolume3Month: Double? = nil, trailingAnnualDividendYield: Double? = nil, epsTrailingTwelveMonths: Double? = nil, region: String? = nil) {
         self.symbol = symbol
         self.currency = currency
         self.marketState = marketState
@@ -99,6 +100,7 @@ public struct Quote: Decodable, Identifiable, Hashable {
         self.averageDailyVolume3Month = averageDailyVolume3Month
         self.trailingAnnualDividendYield = trailingAnnualDividendYield
         self.epsTrailingTwelveMonths = epsTrailingTwelveMonths
+        self.region = region
     }
     
 }

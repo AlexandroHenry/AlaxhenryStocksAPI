@@ -13,11 +13,11 @@ struct AlaxhenryStocksAPIExec {
     static let alaxhenryStocksAPI = AlaxhenryStocksAPI()
     
     static func main() async {
-        //        let (data, _) = try! await URLSession.shared.data(from: URL(string: "https://query1.finance.yahoo.com/v7/finance/quote")!)
-        //
-        //        let quoteResponse = try! JSONDecoder().decode(QuoteResponse.self, from: data)
-        //
-        //        print(quoteResponse)
+        let (data, _) = try! await URLSession.shared.data(from: URL(string: "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL")!)
+
+        let quoteResponse = try! JSONDecoder().decode(QuoteResponse.self, from: data)
+
+        print(quoteResponse)
         
         //        let (searchData, _) = try! await URLSession.shared.data(from: URL(string: "https://query1.finance.yahoo.com/v1/finance/search?q=Tesla")!)
         //
@@ -46,13 +46,13 @@ struct AlaxhenryStocksAPIExec {
         //            print(error.localizedDescription)
         //        }
         
-        do {
-            if let chart = try await alaxhenryStocksAPI.fetchChartData(symbol: "AAPL", range: .oneDay) {
-                print(chart)
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
+//        do {
+//            if let chart = try await alaxhenryStocksAPI.fetchChartData(symbol: "AAPL", range: .oneDay) {
+//                print(chart)
+//            }
+//        } catch {
+//            print(error.localizedDescription)
+//        }
         
     }
 }
